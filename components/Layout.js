@@ -1,40 +1,94 @@
 import Link from 'next/link'
+import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons'
-import styles from './Layout.module.scss'
+
+const Header = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 150px;
+  padding: 0 48px;
+  color: #519E8A;
+`;
+
+const Title = styled.div`
+  font-family: 'Roboto Slab', serif;
+  font-size: 32px;
+  margin: 0;
+`;
+
+const Navigation = styled.nav`
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+`;
+
+const Content = styled.div`
+  margin: 0 30% 48px;
+  min-height: calc(100vh - 150px - 50px - 64px);
+
+  @media only screen and (max-width: 768px) {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  h1, h2 {
+    font-family: 'Roboto Slab', serif;
+    color: #519E8A;
+  }
+
+  a {
+    color: #519E8A;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+`;
+
+const Footer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  padding: 0 0 12px;
+  color: #519E8A;
+`;
+
+const Icon = styled.div`
+  padding: 0px 12px;
+  font-size: 24px;
+`;
 
 export default function Layout({children}) {
   return (
-    <div>
-      {/* Header */}
-      <div className={styles.header}>
-        <div>
-          <h1>Kevin Zou</h1>
-          <nav className={styles.nav}>
-            <Link href="/">Home</Link>
-            <Link href="/blog">Blog</Link>
-          </nav>
-        </div>
-      </div>
+    <>
+      <Header>
+        <Title>
+          <Link href="/">Kevin Zou</Link>
+        </Title>
+        <Navigation>
+          <Link href="/blog">Blog</Link>
+        </Navigation>
+      </Header>
 
-      {/* Page content */}
-      <main className={styles.content}>
+      <Content>
         {children}
-      </main>
+      </Content>
 
-      {/* Footer */}
-      <div className={styles.footer}>
-        <div className={styles.icon}>
+      <Footer>
+        <Icon>
           <a href="https://github.com/kevin-zou" target="_blank">
             <FontAwesomeIcon icon={faGithub} />
           </a>
-        </div>
-        <div className={styles.icon}>
+        </Icon>
+        <Icon>
           <a href="https://twitter.com/therealkevinzoo" target="_blank">
             <FontAwesomeIcon icon={faTwitter} />
           </a>
-        </div>
-      </div>
-    </div>
+        </Icon>
+      </Footer>
+    </>
   )
 }

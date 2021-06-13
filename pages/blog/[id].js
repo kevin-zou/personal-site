@@ -1,19 +1,27 @@
+import styled from 'styled-components'
 import Markdown from 'react-markdown'
 import gfm from 'remark-gfm'
 import Layout from '../../components/Layout'
-import utilStyles from '../../styles/utils.module.scss'
 import { getAllPostIds, getPostData } from '../../lib/posts'
+
+const Content = styled.div`
+  img {
+    max-width: 100%;
+  }
+`;
 
 export default function Post({ markdown, postData }) {
   return (
     <Layout>
-      <h1 className={utilStyles['post-title']}>
+      <h1>
         {postData.title}
       </h1>
-      <div>{postData.date}</div>
-      <Markdown remarkPlugins={[gfm]}>
-        { markdown }
-      </Markdown>
+      <p>{postData.date}</p>
+      <Content>
+        <Markdown remarkPlugins={[gfm]}>
+          { markdown }
+        </Markdown>
+      </Content>
     </Layout>
   )
 }
