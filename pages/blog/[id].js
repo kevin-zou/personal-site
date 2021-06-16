@@ -5,6 +5,10 @@ import Layout from '../../components/Layout'
 import { getAllPostIds, getPostData } from '../../lib/posts'
 
 const Content = styled.div`
+  h1 {
+    margin: 0;
+  }
+
   img {
     max-width: 100%;
   }
@@ -13,11 +17,11 @@ const Content = styled.div`
 export default function Post({ markdown, postData }) {
   return (
     <Layout>
-      <h1>
-        {postData.title}
-      </h1>
-      <p>{postData.date}</p>
       <Content>
+        <h1>
+          {postData.title}
+        </h1>
+        <p>{postData.date}</p>
         <Markdown remarkPlugins={[gfm]}>
           { markdown }
         </Markdown>

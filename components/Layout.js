@@ -38,12 +38,8 @@ const Content = styled.div`
     color: #519E8A;
   }
 
-  a {
-    color: #519E8A;
-
-    &:hover {
-      text-decoration: underline;
-    }
+  a:hover {
+    text-decoration: underline;
   }
 `;
 
@@ -57,8 +53,13 @@ const Footer = styled.div`
 `;
 
 const Icon = styled.div`
-  padding: 0px 12px;
+  margin: 0px 24px;
   font-size: 24px;
+  transition: transform .2s ease-in-out;
+
+  :hover {
+    transform: scale(1.5);
+  }
 `;
 
 export default function Layout({children}) {
