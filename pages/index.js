@@ -25,8 +25,9 @@ export default function Home() {
       </Section>
       <Section>
         <h2>Hi, I'm Kevin!</h2>
-        <p>I’m a software developer currently studying at the University of British Columbia. When it comes to tech and development, I love thinking about how to improve engineering processes and create thoughtfully designed and pleasing experiences for the user.</p>
-        <p>In my spare time you can find me on one of BC’s beautiful trails, playing a game of ultimate, playing video games, or relaxing with friends and family.</p>
+        <p>I’m a computer science student in their final year at the University of British Columbia. As an aspiring developer I am passionate about implementing thoughtful and pleasing user experiences. I enjoy evaluating development processes and improving them iteratively.</p>
+        <p>My experience includes full stack development with a focus on the front end. I've worked in product-led organizations and am extremely comfortable with collaborating with design and product teams in agile.</p>
+        <p>In my spare time you can find me on one of BC’s beautiful trails, playing ultimate frisbee, enjoying video games, or relaxing with friends and family.</p>
       </Section>
       <Section>
         <h2>What I'm up to</h2>

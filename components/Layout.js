@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons'
 
 const Header = styled.div`
   display: flex;
@@ -82,6 +82,11 @@ export default function Layout({children}) {
         <Icon>
           <a href="https://github.com/kevin-zou" target="_blank">
             <FontAwesomeIcon icon={faGithub} />
+          </a>
+        </Icon>
+        <Icon>
+          <a href="https://www.linkedin.com/in/kevin-zou" target="_blank">
+            <FontAwesomeIcon icon={faLinkedin} />
           </a>
         </Icon>
         <Icon>
