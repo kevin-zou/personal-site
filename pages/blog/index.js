@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import Link from 'next/link'
 import styled from 'styled-components'
 import Layout from '../../components/Layout'
@@ -12,6 +13,10 @@ const PostList = styled.ul`
 export default function Blog({allPostsData}) {
   return (
     <Layout>
+      <Head>
+        <title>Blog | Kevin Zou</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <h2>All posts</h2>
       <PostList>
         {allPostsData.map(({ id, date, title }) => (

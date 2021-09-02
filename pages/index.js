@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import styled from 'styled-components'
 import Layout from '../components/Layout'
 import Experience from '../components/Experience'
@@ -17,6 +18,10 @@ const Section = styled.div`
 export default function Home() {
   return (
     <Layout>
+      <Head>
+        <title>Home | Kevin Zou</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <Section flexAlign="center">
         <Profile
           src="/static/profile_picture.jpg"
