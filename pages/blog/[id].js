@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import Markdown from 'react-markdown'
 import gfm from 'remark-gfm'
+import moment from 'moment'
 import Layout from '../../components/Layout'
 import { getAllPostIds, getPostData } from '../../lib/posts'
 
@@ -21,7 +22,7 @@ export default function Post({ markdown, postData }) {
         <h1>
           {postData.title}
         </h1>
-        <p>{postData.date}</p>
+        <p>{moment(postData.date).format('MMMM Do, YYYY')}</p>
         <Markdown remarkPlugins={[gfm]}>
           { markdown }
         </Markdown>

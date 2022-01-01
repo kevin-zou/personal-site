@@ -13,7 +13,7 @@ const Section = styled.div`
   display: flex;
   flex-direction: column;
   align-items: ${props => props.flexAlign};
-  margin: ${props => props.margin || '0 0 24px'};
+  ${props => props.margin && `margin: ${props.margin};`}
 `;
 
 const Grid = styled.div`
@@ -41,7 +41,7 @@ export default function Home() {
         <p>My experience includes full stack development with a focus on the front end. I've worked in product-led organizations and am extremely comfortable with collaborating with design and product teams in agile.</p>
         <p>In my spare time you can find me on one of BC’s beautiful trails, playing ultimate frisbee, enjoying video games, or relaxing with friends and family.</p>
       </Section>
-      <Section>
+      <Section margin="0 0 16px">
         <h2>Work Experience</h2>
         <Experience
           title="Software Developer Co-op"
@@ -62,7 +62,7 @@ export default function Home() {
           color="#46DB83"
         />
       </Section>
-      <Section>
+      <Section margin="0 0 16px">
         <h2>Projects</h2>
         <Grid>
           <Project
@@ -81,7 +81,7 @@ export default function Home() {
           />
         </Grid>
       </Section>
-      <Section>
+      <Section margin="0 0 16px">
         <h2>Extracurricular</h2>
         <Experience
           title="Development Director"
