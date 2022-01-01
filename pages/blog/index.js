@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import moment from 'moment'
 import styled from 'styled-components'
 import Layout from '../../components/Layout'
 import { getSortedPostsData } from '../../lib/posts'
@@ -8,6 +9,10 @@ const PostList = styled.ul`
   list-style-type: none;
   margin: 0;
   padding: 0;
+
+  li:not(:last-of-type) {
+    margin-bottom: 12px;
+  }
 `;
 
 export default function Blog({allPostsData}) {
@@ -21,10 +26,10 @@ export default function Blog({allPostsData}) {
       <PostList>
         {allPostsData.map(({ id, date, title }) => (
           <li key={id}>
-            <div>{date}</div>
             <Link href={`/blog/${id}`}>
               {title}
             </Link>
+            <div>{moment(date).format('MMMM Do, YYYY')}</div>
           </li>
         ))}
       </PostList>
