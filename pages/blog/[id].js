@@ -19,8 +19,7 @@ const Content = styled.div`
 export default function Post({ markdown, postData }) {
   const metadata = {
     title: `${postData.title} | Kevin Zou`,
-    description: postData?.description ?? 'Website of a person learning how to code and stuff',
-    image: '../../meta-image.png',
+    image: 'https://kevinzou.xyz/meta-image.png',
   };
 
   return (
@@ -30,18 +29,15 @@ export default function Post({ markdown, postData }) {
         <meta name="description" content={metadata.description} />
 
         <meta itemprop="name" content={metadata.title} />
-        <meta itemprop="description" content={metadata.description} />
         <meta itemprop="image" content={metadata.image} />
 
         <meta property="og:url" content="https://kevinzou.xyz" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content={metadata.title} />
-        <meta property="og:description" content={metadata.description} />
         <meta property="og:image" content={metadata.image} />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={metadata.title} />
-        <meta name="twitter:description" content={metadata.description} />
         <meta name="twitter:image" content={metadata.image} />
       </Head>
       <Content>

@@ -18,13 +18,14 @@ const PostList = styled.ul`
 const metadata = {
   title: 'Blog | Kevin Zou',
   description: 'Blog of a person learning how to code and stuff',
-  image: '../../meta-image.png',
+  image: 'https://kevinzou.xyz/meta-image.png',
 };
 
 export default function Blog({allPostsData}) {
   return (
     <Layout>
       <Head>
+        <base href="https://kevinzou.xyz/" />
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
 

@@ -25,7 +25,7 @@ const Grid = styled.div`
 const metadata = {
   title: 'Home | Kevin Zou',
   description: 'Website of a person learning how to code and stuff',
-  image: '/meta-image.png',
+  image: 'https://kevinzou.xyz/meta-image.png',
 };
 
 export default function Home() {
