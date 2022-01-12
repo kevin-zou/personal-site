@@ -1,6 +1,7 @@
 ---
 title: 'Takeaways from my job search as a new grad'
 date: '2021-12-31'
+description: 'The process and results of my first "serious" job search'
 ---
 
 There were two major thoughts I had going into my final year at UBC:

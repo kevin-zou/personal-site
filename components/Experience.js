@@ -9,7 +9,7 @@ const Container = styled.div`
     margin: 0;
   }
 
-  border-left: 5px solid ${props => props.color || '#519E8A'};
+  border-left: 5px solid ${props => props.color || '#E76F51'};
   padding-left: 8px;
 
   :not(:last-of-type) {

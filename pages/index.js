@@ -22,19 +22,34 @@ const Grid = styled.div`
   gap: 8px;
 `;
 
+const metadata = {
+  title: 'Home | Kevin Zou',
+  description: 'Website of a person learning how to code and stuff',
+  image: '/meta-image.png',
+};
+
 export default function Home() {
   return (
     <Layout>
       <Head>
-        <title>Home | Kevin Zou</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+
+        <meta itemprop="name" content={metadata.title} />
+        <meta itemprop="description" content={metadata.description} />
+        <meta itemprop="image" content={metadata.image} />
+
+        <meta property="og:url" content="https://kevinzou.xyz" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={metadata.title} />
+        <meta property="og:description" content={metadata.description} />
+        <meta property="og:image" content={metadata.image} />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={metadata.title} />
+        <meta name="twitter:description" content={metadata.description} />
+        <meta name="twitter:image" content={metadata.image} />
       </Head>
-      <Section flexAlign="center">
-        <Profile
-          src="/static/profile_picture.jpg"
-          alt="Picture of the author, Kevin"
-        />
-      </Section>
       <Section>
         <h2>Hi, I'm Kevin!</h2>
         <p>I’m a computer science student in their final year at the University of British Columbia. As an aspiring developer I am passionate about implementing thoughtful and pleasing user experiences. I enjoy evaluating development processes and improving them iteratively.</p>

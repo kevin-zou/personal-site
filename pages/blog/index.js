@@ -15,12 +15,33 @@ const PostList = styled.ul`
   }
 `;
 
+const metadata = {
+  title: 'Blog | Kevin Zou',
+  description: 'Blog of a person learning how to code and stuff',
+  image: '../../meta-image.png',
+};
+
 export default function Blog({allPostsData}) {
   return (
     <Layout>
       <Head>
-        <title>Blog | Kevin Zou</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+
+        <meta itemprop="name" content={metadata.title} />
+        <meta itemprop="description" content={metadata.description} />
+        <meta itemprop="image" content={metadata.image} />
+
+        <meta property="og:url" content="https://kevinzou.xyz" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={metadata.title} />
+        <meta property="og:description" content={metadata.description} />
+        <meta property="og:image" content={metadata.image} />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={metadata.title} />
+        <meta name="twitter:description" content={metadata.description} />
+        <meta name="twitter:image" content={metadata.image} />
       </Head>
       <h2>All posts</h2>
       <PostList>

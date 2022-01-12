@@ -1,12 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,400&display=swap');
 
 html,
 body {
-  background: #FAF9F9;
+  background: #141014;
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  color: #e7e7e7;
+  font-size: 1.1em;
+  font-family: 'Poppins', sans-serif;
 }
 
 h1, p {
@@ -14,12 +15,13 @@ h1, p {
 }
 
 a {
-  color: #519E8A;
+  color: #E76F51;
   text-decoration: none;
+  transition: color 400ms;
 }
 
 a:hover {
-  color: #124559;
+  color: #e24d28;
 }
 
 * {

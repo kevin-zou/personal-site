@@ -28,10 +28,12 @@ const Link = styled.a`
 
 export default function Project({ bgSrc, link, name, description, techStack}) {
   return (
-    <Card bgSrc={bgSrc}>
-      <Link href={link} target="_blank"><h3>{name}</h3></Link>
-      <p>{description}</p>
-      <p>{techStack}</p>
-    </Card>
+    <a href={link} target="_blank">
+      <Card bgSrc={bgSrc}>
+        <h3>{name}</h3>
+        <p>{description}</p>
+        <p>{techStack}</p>
+      </Card>
+    </a>
   );
 };
