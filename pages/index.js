@@ -65,7 +65,7 @@ export default function Home() {
           color="#46DB83"
         />
         <Experience
-          title="Full-Stack Software Engineer"
+          title="Full-Stack Software Engineer Co-op"
           organization="Opencare.com"
           tenure="September 2020 - December 2020"
           color="#F37F6E"
@@ -102,13 +102,7 @@ export default function Home() {
           title="Development Director"
           organization="nwPlus"
           tenure="May 2021 - present"
-          color="#06C1C0"
-        />
-        <Experience
-          title="Development Director"
-          organization="UBC Esports Association"
-          tenure="May 2021 - present"
-          color="#15204E"
+          color="#79FBB5"
         />
       </Section>
     </Layout>

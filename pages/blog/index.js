@@ -25,7 +25,6 @@ export default function Blog({allPostsData}) {
   return (
     <Layout>
       <Head>
-        <base href="https://kevinzou.xyz/" />
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
 
