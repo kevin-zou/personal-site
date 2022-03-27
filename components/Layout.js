@@ -3,12 +3,20 @@ import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons'
 
+const Page = styled.div`
+  margin: 0 25% 48px;
+
+  @media only screen and (max-width: 768px) {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+`;
+
 const Header = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 150px;
-  padding: 0 48px;
   color: #E76F51;
   text-transform: lowercase;
 
@@ -42,13 +50,8 @@ const Navigation = styled.nav`
 `;
 
 const Content = styled.div`
-  margin: 0 48px 48px;
-  min-height: calc(100vh - 150px - 50px - 64px);
-
-  @media only screen and (max-width: 768px) {
-    margin-left: 10%;
-    margin-right: 10%;
-  }
+  margin-bottom: 48px;
+  min-height: calc(100vh - 150px - 50px);
 
   h1, h2 {
     font-family: 'Poppins', serif;
@@ -74,7 +77,6 @@ const Footer = styled.div`
   align-items: center;
   justify-content: center;
   height: 50px;
-  padding: 0 0 48px;
   color: #E76F51;
 `;
 
@@ -90,7 +92,7 @@ const Icon = styled.div`
 
 export default function Layout({children}) {
   return (
-    <>
+    <Page>
       <Header>
         <Title>
           <Link href="/">Kevin Zou</Link>
@@ -121,6 +123,6 @@ export default function Layout({children}) {
           </a>
         </Icon>
       </Footer>
-    </>
+    </Page>
   )
 }
