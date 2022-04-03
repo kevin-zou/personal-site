@@ -151,11 +151,17 @@ export default function Changelog() {
         </ul>
       </Card>
       <Card id="v1.7.0">
-        <h3>v1.8.0</h3>
+        <h3>v1.7.0</h3>
+        <p>updates</p>
+        <ul>
+          <li>graduated from high school and got accepted to UBC!</li>
+        </ul>
+      </Card>
+      <Card id="v1.6.0">
+        <h3>v1.6.0</h3>
         <p>updates</p>
         <ul>
           <li>became the Student Council President at my high school</li>
-          <li>graduated from high school and got accepted to UBC!</li>
         </ul>
       </Card>
       <Card id="v1.2.0">
