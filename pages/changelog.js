@@ -1,5 +1,6 @@
-import styled from "styled-components";
+import Head from "next/head";
 import Link from "next/link";
+import styled from "styled-components";
 import Layout from "../components/Layout";
 
 const Card = styled.div`
@@ -35,9 +36,35 @@ const VersionList = styled.ul`
   list-style-type: none;
 `
 
+const metadata = {
+  title: 'Changelog | Kevin Zou',
+  description: 'A brief history of me disguised as patch notes',
+  image: 'https://kevinzou.xyz/meta-image.png',
+};
+
 export default function Changelog() {
   return (
     <Layout>
+      <Head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+
+        <meta itemprop="name" content={metadata.title} />
+        <meta itemprop="description" content={metadata.description} />
+        <meta itemprop="image" content={metadata.image} />
+
+        <meta property="og:url" content="https://kevinzou.xyz" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={metadata.title} />
+        <meta property="og:description" content={metadata.description} />
+        <meta property="og:image" content={metadata.image} />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={metadata.title} />
+        <meta name="twitter:description" content={metadata.description} />
+        <meta name="twitter:image" content={metadata.image} />
+      </Head>
+
       <h2>changelog</h2>
       <p>welcome to the changelog of my life :)</p>
       <Sidebar>
