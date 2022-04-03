@@ -8,6 +8,7 @@ body {
   color: #e7e7e7;
   font-size: 1em;
   font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
 }
 
 h1, p {
