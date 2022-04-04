@@ -66,8 +66,7 @@ const Content = styled.div`
     transition: background-size 400ms;
   }
 
-  a:hover,
-  a:focus {
+  a:hover {
     background-size: 100% 0.1em;
   }
 `;

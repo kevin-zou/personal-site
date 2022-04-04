@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 import Layout from "../components/Layout";
 
@@ -7,6 +8,7 @@ const Card = styled.div`
   border: 1px solid #e7e7e7;
   border-radius: 4px;
   padding: 4px 12px;
+  scroll-margin-top: 266px;
 
   &:not(:last-of-type) {
     margin-bottom: 24px;
@@ -17,13 +19,13 @@ const Card = styled.div`
  * 
  * The top offset is calculated by the nav bar + h1 height + h1 margins + p height + p margin
  * The left offset is calculated by the page margins set in the Layout component, minus the width of
- *   the Sidebar component and its right margin
+ *   the Sidebar component and its right margin (150px + 36px + 40px + 24px + 16px = 266px)
  */
 const Sidebar = styled.div`
   position: fixed;
   width: 134px;
   margin-right: 16px;
-  top: calc(150px + 36px + 40px + 24px + 16px);
+  top: 266px;
   left: calc(25% - 150px);
   text-align: right;
 
@@ -32,8 +34,12 @@ const Sidebar = styled.div`
   }
 `
 
-const VersionList = styled.ul`
+const PlainList = styled.ul`
   list-style-type: none;
+`
+
+const ToggleableItem = styled.li`
+  ${p => p.active && 'font-weight: bold;'}
 `
 
 const metadata = {
@@ -42,7 +48,46 @@ const metadata = {
   image: 'https://kevinzou.xyz/meta-image.png',
 };
 
+const versions = [
+  'v2.2.2', 'v2.2.1', 'v2.1.0', 'v2.0.0', 'v1.9.0', 'v1.8.0', 'v1.7.0', 'v1.6.0', 'v1.2.0', 'v0.9.0'
+];
+
 export default function Changelog() {
+  const [activeHeader, setActiveHeader] = useState('');
+
+  // https://www.emgoto.com/react-table-of-contents/
+  const useIntersectionObserver = (onIntersect) => {
+    useEffect(() => {
+      const callback = (elements) => {
+        if (elements[0].isIntersecting) {
+          onIntersect(elements[0].target.textContent);
+        }
+      }
+
+      const observer = new IntersectionObserver(callback, {
+        rootMargin: '-266px 0px -60% 0px',
+      })
+
+      const headings = Array.from(document.querySelectorAll('h3'))
+      headings.forEach((element) => observer.observe(element))
+
+      return () => observer.disconnect()
+    }, [])
+  }
+
+  const VersionList = ({ activeHeader }) => {
+    return (
+      <PlainList>
+        {versions.map(version =>
+          <ToggleableItem key={version} active={version === activeHeader}>
+            <Link href={`#${version}`}>{version}</Link>
+          </ToggleableItem>)}
+      </PlainList>
+    )
+  }
+
+  useIntersectionObserver(setActiveHeader)
+
   return (
     <Layout>
       <Head>
@@ -69,17 +114,7 @@ export default function Changelog() {
       <p>welcome to the changelog of my life :)</p>
       <Sidebar>
         <p>See notes for</p>
-        <VersionList>
-          <li><Link href="#v2.2.2">v2.2.2</Link></li>
-          <li><Link href="#v2.2.1">v2.2.1</Link></li>
-          <li><Link href="#v2.1.0">v2.1.0</Link></li>
-          <li><Link href="#v2.0.0">v2.0.0</Link></li>
-          <li><Link href="#v1.9.0">v1.9.0</Link></li>
-          <li><Link href="#v1.8.0">v1.8.0</Link></li>
-          <li><Link href="#v1.7.0">v1.7.0</Link></li>
-          <li><Link href="#v1.2.0">v1.2.0</Link></li>
-          <li><Link href="#v0.9.0">v0.9.0</Link></li>
-        </VersionList>
+        <VersionList activeHeader={activeHeader} />
       </Sidebar>
       <Card id="v2.2.2">
         <h3>v2.2.2</h3>
