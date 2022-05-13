@@ -121,8 +121,8 @@ export default function Changelog() {
         <p>updates</p>
         <ul>
           <li>started a personal changelog to keep track of significant events in my life</li>
-          <li>casually asked somebody to get lunch/dinner one-on-one</li>
-          <li>realized that I've become much more extraverted recently</li>
+          <li>casually asked somebody to get lunch/dinner one-on-one (yes this was a big deal for me)</li>
+          <li>have felt much more extraverted recently</li>
         </ul>
       </Card>
       <Card id="v2.2.1">
@@ -170,7 +170,7 @@ export default function Changelog() {
         <p>bugs</p>
         <ul>
           <li>developed a severe case of imposter syndrome</li>
-          <li>at times was nervous holding conversations with people I'm not close to</li>
+          <li>was sometimes nervous holding conversations with people I'm not close to</li>
         </ul>
       </Card>
       <Card id="v1.8.0">
