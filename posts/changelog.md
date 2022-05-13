@@ -7,7 +7,7 @@ Through the tail end of 2021 and the beginning of 2022 I think I've changed a bi
 
 With that parallel in mind we brainstormed the idea of using the software changelog format for a person's development. It's a way to sort of "track" and reflect on how you've changed as a person.
 
-That conversation was months ago, and I'm happy to say that this idea has blossomed into a small corner of the internet over at [kevinzou.xyz/changelog](https://kevinzou.xyz/changelog).
+That conversation was months ago, and I'm happy to say that this idea has blossomed into a small corner of the internet over at [kevinzou.xyz/changelog](/changelog).
 
 ## How it works
 changelog follows a psuedo-[semantic versioning](https://semver.org) method for identifying "versions." Given a version in the format of MAJOR.MINOR.PATCH:

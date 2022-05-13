@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Layout from '../components/Layout'
 import Experience from '../components/Experience'
 import Project from '../components/Project'
+import Link from 'next/link'
 
 const Profile = styled.img`
   border-radius: 50%;
@@ -55,6 +56,7 @@ export default function Home() {
         <p>I’m a computer science student in their final year at the University of British Columbia. As an aspiring developer I am passionate about implementing thoughtful and pleasing user experiences. I enjoy evaluating development processes and improving them iteratively.</p>
         <p>My experience includes full stack development with a focus on the front end. I've worked in product-led organizations and am extremely comfortable with collaborating with design and product teams in agile.</p>
         <p>In my spare time you can find me on one of BC’s beautiful trails, playing ultimate frisbee, enjoying video games, or relaxing with friends and family.</p>
+        <p>Click <Link href="/Kevin_Zou_Resume.pdf">here</Link> for my resume!</p>
       </Section>
       <Section margin="0 0 16px">
         <h2>Work Experience</h2>
