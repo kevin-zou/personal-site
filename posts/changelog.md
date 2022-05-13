@@ -9,6 +9,13 @@ With that parallel in mind we brainstormed the idea of using the software change
 
 That conversation was months ago, and I'm happy to say that this idea has blossomed into a small corner of the internet over at [kevinzou.xyz/changelog](https://kevinzou.xyz/changelog).
 
+## How it works
+changelog follows a psuedo-[semantic versioning](https://semver.org) method for identifying "versions." Given a version in the format of MAJOR.MINOR.PATCH:
+- MAJOR represents the decade of my life
+- MINOR represents the year of that decade
+- PATCH is an integer that increments every time I feel a "significant" change occurs
+
+Given version "2.2.2" we can determine that it's the 22nd year of my life and it's the second time I felt like something has changed since I turned 22.
 
 ## Future
 There are some small things I'd like to tweak here and there, and then some bigger additions I think would be neat (eg. a footnote system or method to "expand" a change). For now it's in a decent place and I'll just keep adding updates.
