@@ -46,7 +46,8 @@ const Title = styled.div`
 const Navigation = styled.nav`
   display: flex;
   justify-content: center;
-  font-size: 24px;
+  font-size: 20px;
+  gap: 20px;
 `;
 
 const Content = styled.div`
@@ -97,6 +98,7 @@ export default function Layout({children}) {
           <Link href="/">Kevin Zou</Link>
         </Title>
         <Navigation>
+          <Link href="/projects">Projects</Link>
           <Link href="/blog">Blog</Link>
         </Navigation>
       </Header>

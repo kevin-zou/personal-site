@@ -1,4 +1,5 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
+import Link from 'next/link';
 
 const Card = styled.div`
   border-radius: 4px;
@@ -15,25 +16,18 @@ const Card = styled.div`
   &:hover {
     background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url(${p => p.bgSrc}) center;
     background-size: cover;
-  }
-`;
-
-const Link = styled.a`
-  color: white;
-
-  &:hover {
-    color: white;
+    cursor: pointer;
   }
 `;
 
 export default function Project({ bgSrc, link, name, description, techStack}) {
   return (
-    <a href={link} target="_blank">
+    <Link href={link}>
       <Card bgSrc={bgSrc}>
         <h3>{name}</h3>
         <p>{description}</p>
         <p>{techStack}</p>
       </Card>
-    </a>
+    </Link>
   );
 };
