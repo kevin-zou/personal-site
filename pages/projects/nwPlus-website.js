@@ -1,7 +1,9 @@
 import Head from "next/head";
+import Image from "next/image";
 import styled from "styled-components";
 import Layout from "../../components/Layout";
 import Tag from "../../components/Tag";
+import nwPlusImage from "../../public/assets/nwPlus_website.png";
 
 const FlexList = styled.div`
   display: flex;
@@ -65,7 +67,7 @@ export default function nwPlusWebsite() {
         <a href="https://nwplus.io" target="_blank">Deployed site</a>
       </FlexList>
       <SectionHeader>Media</SectionHeader>
-      <img width="100%" src="/assets/nwPlus_website.png" />
+      <Image placeholder="blur" width="1524px" height="5529px" src={nwPlusImage} />
     </Layout>
   )
 }

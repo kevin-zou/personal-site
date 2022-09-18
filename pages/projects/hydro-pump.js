@@ -1,7 +1,9 @@
 import Head from "next/head";
+import Image from "next/image";
 import styled from "styled-components";
 import Layout from "../../components/Layout";
 import Tag from "../../components/Tag";
+import HydroPumpImage from "../../public/assets/hydro-pump.jpg";
 
 const FlexList = styled.div`
   display: flex;
@@ -62,7 +64,7 @@ export default function HydroPump() {
       <SectionHeader>Links</SectionHeader>
       <a href="https://github.com/kevin-zou/hydro-pump-2" target="_blank">GitHub Repo</a>
       <SectionHeader>Media</SectionHeader>
-      <img width="100%" src="/assets/hydro-pump.jpg" />
+      <Image placeholder="blur" width="473px" height="521px" src={HydroPumpImage} />
     </Layout>
   )
 }
