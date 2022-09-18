@@ -43,9 +43,9 @@ export default function nwPlusWebsite() {
         <meta name="twitter:description" content={metadata.description} />
         <meta name="twitter:image" content={metadata.image} />
       </Head>
-      <h1>nwPlus Website</h1>
+      <h2>nwPlus Website</h2>
       <FlexList>
-        <Tag bgColor="#5ed3f3" color="black">Next.js</Tag>
+        <Tag bgColor="#ffffff" color="black">Next.js</Tag>
         <Tag bgColor="#f7c52b" color="black">Firebase</Tag>
       </FlexList>
       <SectionHeader>Description</SectionHeader>

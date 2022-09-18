@@ -1,15 +1,6 @@
 import Head from 'next/head'
-import styled from 'styled-components'
 import Layout from '../components/Layout'
-import Experience from '../components/Experience'
 import Link from 'next/link'
-
-const Section = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: ${props => props.flexAlign};
-  ${props => props.margin && `margin: ${props.margin};`}
-`;
 
 const metadata = {
   title: 'Home | Kevin Zou',
@@ -39,43 +30,24 @@ export default function Home() {
         <meta name="twitter:description" content={metadata.description} />
         <meta name="twitter:image" content={metadata.image} />
       </Head>
-      <Section>
-        <h2>Hi, I'm Kevin! 👋</h2>
-        <p>I’m a computer science student in their final year at the University of British Columbia. As an aspiring developer I am passionate about implementing thoughtful and pleasing user experiences. I enjoy evaluating development processes and improving them iteratively.</p>
-        <p>My experience includes full stack development with a focus on the front end. I've worked in product-led organizations and am extremely comfortable with collaborating with design and product teams in agile.</p>
-        <p>In my spare time you can find me on one of BC’s beautiful trails, playing ultimate frisbee, enjoying video games, or relaxing with friends and family.</p>
-        <p>Click <Link href="/Kevin_Zou_Resume.pdf">here</Link> for my resume!</p>
-      </Section>
-      <Section margin="0 0 16px">
-        <h2>Work Experience</h2>
-        <Experience
-          title="Software Developer Co-op"
-          organization="Vidyard"
-          tenure="May 2021 - August 2021"
-          color="#46DB83"
-        />
-        <Experience
-          title="Full-Stack Software Engineer Co-op"
-          organization="Opencare.com"
-          tenure="September 2020 - December 2020"
-          color="#F37F6E"
-        />
-        <Experience
-          title="Software Developer Co-op"
-          organization="Vidyard"
-          tenure="January 2020 - August 2020"
-          color="#46DB83"
-        />
-      </Section>
-      <Section margin="0 0 16px">
-        <h2>Extracurricular</h2>
-        <Experience
-          title="Development Director"
-          organization="nwPlus"
-          tenure="May 2021 - present"
-          color="#79FBB5"
-        />
-      </Section>
+      <h2>Hi, I'm Kevin! 👋</h2>
+      <p>
+        I'm a recent graduate from the University of British Columbia, where I majored in Computer Science. I've
+        interned as a software developer at <a href="https://www.vidyard.com" target="_blank">Vidyard</a> and <a href="https://opencare.com" target="_blank">Opencare</a>,
+        working closely with other engineers, product managers, and designers. The majority of my professional
+        experience is in working in B2B companies with a strong emphasis on product.
+      </p>
+      <p>
+        Some of the languages and frameworks I've used include JavaScript, React, Next, Vue, Ruby on Rails, and Express.
+        I'm also familiar with accessibility, E2E testing using Cypress, and working on CI/CD pipelines. That being
+        said, I love learning and using new technologies to solve whatever problem is at hand. Check out some of my
+        projects <Link href="/projects">here</Link>.
+      </p>
+      <p>
+        In my off time I enjoy video games, playing ultimate frisbee or volleyball, and hiking one of BC's beautiful
+        trails. Thank you for reading, and feel free to reach out to say hi!
+      </p>
+      <p>Click <Link href="/Kevin_Zou_Resume.pdf">here</Link> for my resume!</p>
     </Layout>
   )
 }

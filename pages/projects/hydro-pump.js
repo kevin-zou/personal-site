@@ -44,7 +44,7 @@ export default function HydroPump() {
         <meta name="twitter:description" content={metadata.description} />
         <meta name="twitter:image" content={metadata.image} />
       </Head>
-      <h1>Hydro Pump</h1>
+      <h2>Hydro Pump</h2>
       <FlexList>
         <Tag bgColor="#6aa05c" color="white">Node.js</Tag>
         <Tag bgColor="#118d4d" color="white">MongoDB</Tag>

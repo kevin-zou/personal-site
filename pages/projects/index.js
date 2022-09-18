@@ -12,6 +12,7 @@ export default function Projects() {
   return (
     <Layout>
       <h2>Projects</h2>
+      <p>Here are some of the personal projects I've worked on! Click on them for more details.</p>
       <Grid>
         <Project
           bgSrc="https://media.giphy.com/media/nfnF2zVPRemXu/giphy.gif"
