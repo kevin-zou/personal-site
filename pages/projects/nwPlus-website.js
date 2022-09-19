@@ -3,7 +3,7 @@ import Image from "next/image";
 import styled from "styled-components";
 import Layout from "../../components/Layout";
 import Tag from "../../components/Tag";
-import nwPlusImage from "../../public/assets/nwPlus_website.png";
+import nwPlusImage from "../../public/assets/nwPlus-website.png";
 
 const FlexList = styled.div`
   display: flex;

@@ -22,10 +22,17 @@ export default function Projects() {
           techStack="Node.js, MongoDB, Discord API, Heroku"
         />
         <Project
-          bgSrc="/assets/nwPlus-website.png"
+          bgSrc="/assets/nwPlus-website-preview.png"
           link="/projects/nwPlus-website"
           name="nwPlus Homepage"
           description="Led development of new nwPlus website"
+          techStack="Next.js, Firebase"
+        />
+        <Project
+          bgSrc="/assets/nwPlus-portal-preview.png"
+          link="/projects/nwPlus-portal"
+          name="nwPlus Portal"
+          description="Implemented project submission system in live event portal"
           techStack="Next.js, Firebase"
         />
       </Grid>
