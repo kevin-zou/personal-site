@@ -14,6 +14,15 @@ const SectionHeader = styled.h3`
   }
 `
 
+const YouTubeEmbed = styled.iframe`
+  border: none;
+
+  @media only screen and (max-width: 1200px) {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+  }
+`
+
 const metadata = {
   title: 'nwPlus Portal | Kevin Zou',
   image: 'https://kevinzou.xyz/meta-image.png',
@@ -68,7 +77,7 @@ export default function nwPlusWebsite() {
         <a href="https://portal.nwplus.io" target="_blank">Deployed site</a>
       </FlexList>
       <SectionHeader>Media</SectionHeader>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/m1EAe2FQYUU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; fullscreen; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <YouTubeEmbed width="560" height="315" src="https://www.youtube.com/embed/m1EAe2FQYUU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; fullscreen; gyroscope; picture-in-picture" allowfullscreen />
     </Layout>
   )
 }
