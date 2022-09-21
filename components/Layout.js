@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons'
 
 const Page = styled.div`
-  margin: 0 25% 48px;
+  margin: 0 25%;
 
   @media only screen and (max-width: 768px) {
     margin-left: 10%;
@@ -50,9 +50,11 @@ const Navigation = styled.nav`
   gap: 20px;
 `;
 
+// If everything can fit on one screen (ie. 100vh), make sure that the footer is visible
+// 150px header height, 20px top margin of h2 element, 48px bottom margin, 50px footer height, 12px footer margin
 const Content = styled.div`
   margin-bottom: 48px;
-  min-height: calc(100vh - 150px - 50px);
+  min-height: calc(100vh - 150px - 20px - 48px - 50px - 12px);
 
   h1, h2 {
     font-family: 'Poppins', serif;
@@ -78,6 +80,7 @@ const Footer = styled.div`
   justify-content: center;
   height: 50px;
   color: #E76F51;
+  margin-bottom: 12px;
 `;
 
 const Icon = styled.div`
@@ -102,11 +105,9 @@ export default function Layout({children}) {
           <Link href="/blog">Blog</Link>
         </Navigation>
       </Header>
-
       <Content>
         {children}
       </Content>
-
       <Footer>
         <Icon>
           <a href="https://github.com/kevin-zou" target="_blank">
