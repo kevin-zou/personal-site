@@ -3,7 +3,7 @@ import Image from "next/image";
 import styled from "styled-components";
 import Layout from "../../components/Layout";
 import Tag from "../../components/Tag";
-import LoonieImg from "../../public/assets/Loonie.png";
+import LoonieImg from "../../public/assets/loonie.png";
 
 const FlexList = styled.div`
   display: flex;
