@@ -41,6 +41,13 @@ export default function Projects() {
       <p>Here are some of the personal projects I've worked on! Click on them for more details.</p>
       <Grid>
         <Project
+          bgSrc="/assets/loonie.png"
+          link="/projects/Loonie"
+          name="Loonie"
+          description="Website aggregating post-secondary alumni discounts"
+          techStack="Next.js, Chakra UI, Firebase, Vercel"
+        />
+        <Project
           bgSrc="https://media.giphy.com/media/nfnF2zVPRemXu/giphy.gif"
           link="/projects/hydro-pump"
           name="Hydro Pump"
