@@ -49,7 +49,7 @@ const metadata = {
 };
 
 const versions = [
-  'v2.2.2', 'v2.2.1', 'v2.1.0', 'v2.0.0', 'v1.9.0', 'v1.8.0', 'v1.7.0', 'v1.6.0', 'v1.2.0', 'v0.9.0'
+  'v2.3.1', 'v2.2.2', 'v2.2.1', 'v2.1.0', 'v2.0.0', 'v1.9.0', 'v1.8.0', 'v1.7.0', 'v1.6.0', 'v1.2.0', 'v0.9.0'
 ];
 
 export default function Changelog() {
@@ -116,6 +116,19 @@ export default function Changelog() {
         <p>See notes for</p>
         <VersionList activeHeader={activeHeader} />
       </Sidebar>
+      <Card id="v2.3.1">
+        <h3>v2.3.1</h3>
+        <p>updates</p>
+        <ul>
+          <li>moved to San Francisco</li>
+          <li>settled into a new rhythm of life</li>
+          <li>started seeking out new hobbies/interests (eg. bass guitar)</li>
+        </ul>
+        <p>bugfixes</p>
+        <ul>
+          <li>had job offer rescinded, fortunately found a new job</li>
+        </ul>
+      </Card>
       <Card id="v2.2.2">
         <h3>v2.2.2</h3>
         <p>updates</p>
