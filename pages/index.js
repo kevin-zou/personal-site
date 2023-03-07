@@ -32,22 +32,28 @@ export default function Home() {
       </Head>
       <h2>Hi, I'm Kevin! 👋</h2>
       <p>
-        I'm a recent graduate from the University of British Columbia, where I majored in Computer Science. I've
-        interned as a software developer at <a href="https://www.vidyard.com" target="_blank">Vidyard</a> and <a href="https://opencare.com" target="_blank">Opencare</a>,
-        working closely with other engineers, product managers, and designers. The majority of my professional
-        experience is in working in B2B companies with a strong emphasis on product.
+        I'm a software developer. What do I work on?
+      </p>
+      <p>
+        Right now I'm working as a software engineer at <a href="https://www.liquidaty.com/" target="_blank">Liquidaty</a> where
+        I'm building a comprehensive platform for data automation and processing.
+      </p>
+      <p>
+        In previous lives I've interned as a software developer at <a href="https://www.vidyard.com" target="_blank">Vidyard</a> and <a href="https://opencare.com" target="_blank">Opencare</a>.
+        With extensive product-led engineering experience, I specialize in creating intuitive and pleasant user experiences.
       </p>
       <p>
         Some of the languages and frameworks I've used include JavaScript, React, Next, Vue, Ruby on Rails, and Express.
-        I'm also familiar with accessibility, E2E testing using Cypress, and working on CI/CD pipelines. That being
-        said, I love learning and using new technologies to solve whatever problem is at hand. Check out some of my
-        projects <Link href="/projects">here</Link>.
+        I'm also familiar with accessibility, E2E testing using Cypress, and working on CI/CD pipelines. I love learning and
+        using new technologies to solve whatever problem is at hand.
       </p>
       <p>
-        In my off time I enjoy video games, playing ultimate frisbee or volleyball, and hiking one of BC's beautiful
-        trails. Thank you for reading, and feel free to reach out to say hi!
+        During my spare time I like to play video games, watch films, and practice bass guitar. I also play ultimate frisbee
+        and volleyball when I get the chance.
       </p>
-      <p>Click <Link href="/Kevin_Zou_Resume.pdf">here</Link> for my resume!</p>
+      <p>
+        Feel free to reach out to say hi or click <Link href="/Kevin_Zou_Resume.pdf">here</Link> for my resume!
+      </p>
     </Layout>
   )
 }
