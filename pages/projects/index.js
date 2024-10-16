@@ -22,9 +22,9 @@ export default function Projects() {
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
 
-        <meta itemprop="name" content={metadata.title} />
-        <meta itemprop="description" content={metadata.description} />
-        <meta itemprop="image" content={metadata.image} />
+        <meta itemProp="name" content={metadata.title} />
+        <meta itemProp="description" content={metadata.description} />
+        <meta itemProp="image" content={metadata.image} />
 
         <meta property="og:url" content="https://kevinzou.xyz" />
         <meta property="og:type" content="website" />
@@ -68,6 +68,7 @@ export default function Projects() {
           description="Implemented project submission system in live event portal"
           techStack="Next.js, Firebase"
         />
+        <h3>Some other projects</h3>
       </Grid>
     </Layout>
   )
