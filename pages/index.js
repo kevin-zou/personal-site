@@ -31,25 +31,19 @@ export default function Home() {
         <meta name="twitter:image" content={metadata.image} />
       </Head>
       <h2>Hi, I'm Kevin! 👋</h2>
+      <p>This is my my little page on the internet.</p>
+      <h3>Software engineering things</h3>
+      <p>I've always enjoyed programming and I'm fortunate enough to do it for a living. I'm currently working at <a href="https://www.shopcanal.com/" target="_blank">Canal</a> as a software engineer!</p>
       <p>
-        I'm a software developer. What do I work on?
+        In previous lives I've:
       </p>
+      <ul>
+        <li>helped build a comprehensive data transformation platform at <a href="https://www.liquidaty.com" target="_blank">Liquidaty</a></li>
+        <li>interned at <a href="https://www.vidyard.com" target="_blank">Vidyard</a> and <a href="https://opencare.com" target="_blank">Opencare</a></li>
+      </ul>
+      <h3>Fun things</h3>
       <p>
-        Right now I'm working as a software engineer at <a href="https://www.liquidaty.com/" target="_blank">Liquidaty</a> where
-        I'm building a comprehensive platform for data automation and processing.
-      </p>
-      <p>
-        In previous lives I've interned as a software developer at <a href="https://www.vidyard.com" target="_blank">Vidyard</a> and <a href="https://opencare.com" target="_blank">Opencare</a>.
-        With extensive product-led engineering experience, I specialize in creating intuitive and pleasant user experiences.
-      </p>
-      <p>
-        Some of the languages and frameworks I've used include JavaScript, React, Next, Vue, Ruby on Rails, and Express.
-        I'm also familiar with accessibility, E2E testing using Cypress, and working on CI/CD pipelines. I love learning and
-        using new technologies to solve whatever problem is at hand.
-      </p>
-      <p>
-        During my spare time I like to play video games, watch films, and practice bass guitar. I also play ultimate frisbee
-        and volleyball when I get the chance.
+        During my spare time I like to play video games, watch anime and films, and practice bass guitar. I also play volleyball, spikeball, and ultimate frisbee.
       </p>
       <p>
         Feel free to reach out to say hi or click <Link href="/Kevin_Zou_Resume.pdf">here</Link> for my resume!

@@ -68,8 +68,12 @@ export default function Projects() {
           description="Implemented project submission system in live event portal"
           techStack="Next.js, Firebase"
         />
-        <h3>Some other projects</h3>
       </Grid>
+      <h3>Some other projects</h3>
+      <ul>
+        <li><a href="https://r4ymo.itch.io/terrained" target="_blank">Terrained</a> - a game my brother and I built (using Godot) for a game jam</li>
+        <li><a href="https://vendingmachines.kevinzou.xyz" target="_blank">vending machines</a> - a map of every unique vending machine I came across in Japan</li>
+      </ul>
     </Layout>
   )
 }
