@@ -1,26 +1,32 @@
-import { useEffect } from 'react'
-import { useRouter } from 'next/router'
-import Script from 'next/script'
-import * as gtag from '../lib/gtag'
-import '../styles/globals.css'
+import { Poppins } from "next/font/google";
+import { useRouter } from "next/router";
+import Script from "next/script";
+import { useEffect } from "react";
+import * as gtag from "../lib/gtag";
+import "../styles/globals.css";
+
+const poppins = Poppins({
+  weight: "400",
+  subsets: ["latin"],
+});
 
 function MyApp({ Component, pageProps }) {
   // Code for Google Analytics from https://github.com/vercel/next.js/tree/canary/examples/with-google-analytics
-  const router = useRouter()
+  const router = useRouter();
   useEffect(() => {
     const handleRouteChange = (url) => {
-      gtag.pageview(url)
-    }
-    router.events.on('routeChangeComplete', handleRouteChange)
-    router.events.on('hashChangeComplete', handleRouteChange)
+      gtag.pageview(url);
+    };
+    router.events.on("routeChangeComplete", handleRouteChange);
+    router.events.on("hashChangeComplete", handleRouteChange);
     return () => {
-      router.events.off('routeChangeComplete', handleRouteChange)
-      router.events.off('hashChangeComplete', handleRouteChange)
-    }
-  }, [router.events])
+      router.events.off("routeChangeComplete", handleRouteChange);
+      router.events.off("hashChangeComplete", handleRouteChange);
+    };
+  }, [router.events]);
 
   return (
-    <>
+    <main className={poppins.className}>
       {/* Global Site Tag (gtag.js) - Google Analytics */}
       <Script
         strategy="afterInteractive"
@@ -41,8 +47,8 @@ function MyApp({ Component, pageProps }) {
         }}
       />
       <Component {...pageProps} />
-    </>
-  )
+    </main>
+  );
 }
 
-export default MyApp
+export default MyApp;
