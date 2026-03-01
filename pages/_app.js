@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/next";
 import { Poppins } from "next/font/google";
 import { useRouter } from "next/router";
 import Script from "next/script";
@@ -47,6 +48,7 @@ function MyApp({ Component, pageProps }) {
         }}
       />
       <Component {...pageProps} />
+      <Analytics />
     </main>
   );
 }
