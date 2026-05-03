@@ -50,6 +50,36 @@ const metadata = {
 
 const versionData = [
   {
+    version: "v2.6.1",
+    updates: [
+      "attended my first wedding as a groomsman!",
+      "changed jobs to work at Shepherd",
+    ],
+  },
+  {
+    version: "v2.5.2",
+    updates: [
+      "first overseas trip with my brother",
+      "first overseas trip with my partner",
+    ],
+  },
+  {
+    version: "v2.5.1",
+    updates: ["ran a 10k", "company got acquired"],
+  },
+  {
+    version: "v2.4.1",
+    updates: [
+      "got a new job at Canal, learning about e-commerce tech and building scalable systems",
+      "started playing a lot more volleyball",
+    ],
+    bugfixes: ["removed appendix"],
+  },
+  {
+    version: "v2.3.2",
+    updates: ["met a special someone :)"],
+  },
+  {
     version: "v2.3.1",
     updates: [
       "moved to San Francisco",
